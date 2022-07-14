@@ -13,13 +13,14 @@ I used the following libraries for this project:
 Follow these steps:
 
 1. Git Clone this repo.
-2. Create and `.env` at the project root with the following code:
+2. Create and `.env` file at the project root with the following code (ask me for the token):
 ```
-REACT_APP_GITHUB_TOKEN=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
-```
-2. Using your terminal, run `yarn install` at your project root to install all dependencies.
-3. Run `yarn start` to start your app. You should be able to see your app running at [http://localhost:3000](http://localhost:3000)
-4. Feel free to play around with the app typing different topics and watching results.
+REACT_APP_GITHUB_TOKEN=<token>
+``` 
+
+3. Using your terminal, run `yarn install` at your project root to install all dependencies.
+4. Run `yarn start` to start your app. You should be able to see your app running at [http://localhost:3000](http://localhost:3000)
+5. Feel free to play around with the app typing different topics and watching results.
 
 
 ## Improvements
