@@ -1,15 +1,18 @@
 import React from "react";
+import Chip from '@mui/material/Chip';
+import Badge from '@mui/material/Badge';
 
 export interface TopicProps {
+  id: string;
   name: string;
   stargazerCount: number;
+  onClick: () => void;
 }
 
-export default function Topic({name, stargazerCount}: TopicProps) {
+export default function Topic({name, stargazerCount, onClick}: TopicProps) {
   return (
-    <div className="topic">
-      <span className="topic__name">{name}</span>
-      <span className="topic__stargazerCount">{stargazerCount}</span>
-    </div>
+    <Badge badgeContent={stargazerCount} max={99999} color="primary">
+      <Chip label={name} onClick={onClick} />
+    </Badge>
   )
 }
