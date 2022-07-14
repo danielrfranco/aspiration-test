@@ -11,7 +11,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import './App.css';
 
 export default function App() {
-  const [searchInputValue, setSearchInputValuer] = useState<string>('react');
+  const [searchInputValue, setSearchInputValuer] = useState<string>('');
   const [topicName, setTopicName] = useState<string>('react');
   const { loading, error, data } = useQuery(GET_RELATED_TOPICS, {
     variables: {
