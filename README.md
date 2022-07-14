@@ -1,14 +1,19 @@
+# Aspiration Test
+
+You can find this app running as well at [https://aspiration.netlify.app/](https://aspiration.netlify.app/)
+
 ## Dev Notes
 
 I used the following libraries for this project:
 - Apollo Client - Library used to connect to Github GraphQL API
 - Material UI - Used to build components faster
 
-## How to run the app
+## How to run the app locally
 
 Follow these steps:
 
-1. Create and `.env` at the project root with the following code:
+1. Git Clone this repo.
+2. Create and `.env` at the project root with the following code:
 ```
 REACT_APP_GITHUB_TOKEN=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
 ```
