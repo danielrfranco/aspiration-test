@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import { useQuery } from '@apollo/client';
+import { GET_RELATED_TOPICS } from './graphql/queries';
+import Topic from './components/Topic';
+import type { TopicProps } from './components/Topic';
 
-function App() {
+export default function App() {
+  const [topicName, setTopicName] = useState<string>('react');
+  const { loading, error, data } = useQuery(GET_RELATED_TOPICS, {
+    variables: {
+      name: topicName,
+    }
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {data.topic.relatedTopics.map((relatedTopic: TopicProps) => (
+        <Topic name={relatedTopic.name} stargazerCount={relatedTopic.stargazerCount} />
+      ))}
     </div>
   );
 }
-
-export default App;
