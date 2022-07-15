@@ -11,7 +11,7 @@ export interface TopicProps {
 
 export default function Topic({name, stargazerCount, onClick}: TopicProps) {
   return (
-    <Badge badgeContent={stargazerCount} max={99999} color="primary">
+    <Badge className="topic" badgeContent={stargazerCount} max={99999} color="primary">
       <Chip label={name} onClick={onClick} />
     </Badge>
   )
