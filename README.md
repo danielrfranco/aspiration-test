@@ -20,7 +20,7 @@ I used the following libraries for this project:
 Follow these steps:
 
 1. Git Clone this repo.
-2. Create a [personal access token] (https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with your GitHub account with the following scopes:
+2. Create a [personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) with your GitHub account with the following scopes:
 ```
 repo
 repo_deployment
